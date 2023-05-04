@@ -9,3 +9,89 @@
 body {
   font-family: sans-serif;
 }
+
+.navbar {
+  /* position: fixed; */
+  width: 100%;
+  min-height: 100px;
+  padding: 0 50px;
+  background: rgb(26, 8, 54);
+  color: white;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ? How to set "Clothing Store" in the center */
+/* .navbar > h1 {
+  justify-items: center;
+} */
+
+.navbar .cart {
+  position: relative;
+}
+
+.navbar .cart > img {
+  width: 70px;
+  height: 70px;
+}
+
+.navbar .cart .cartAmount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: red;
+}
+
+.shop {
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  justify-content: center;
+}
+
+/* * Use Media in better way (unique pixel sizes) */
+@media (max-width: 1000px) {
+  .shop {
+    grid-template-columns: repeat(2, 250px);
+  }
+}
+
+@media (max-width: 500px) {
+  .shop {
+    grid-template-columns: repeat(1, 250px);
+  }
+}
+.shop .item {
+  border: 1px solid black;
+}
+
+.shop .item > img {
+  width: 250px;
+  height: 300px;
+}
+
+.shop .item .details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+
+.shop .item .price-quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop .item .price-quantity .quantity-button {
+  display: flex;
+  gap: 8px;
+}
+
+/* * use red Minus & green Plus */
+.shop .item .price-quantity .quantity-button > img {
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+}
