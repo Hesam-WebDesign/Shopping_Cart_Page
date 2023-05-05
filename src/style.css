@@ -31,6 +31,7 @@ body {
 
 .navbar .store-name {
   font-size: 2rem;
+  text-align: center;
 }
 
 .navbar .cart,
@@ -49,8 +50,11 @@ body {
 .navbar .cart .cartAmount {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 5px;
+  padding: 5px;
   background: red;
+  font-size: 1rem;
+  border-radius: 5px;
 }
 
 .shop {
@@ -132,4 +136,13 @@ body {
 
 .shop .item .price-quantity .quantity-button > img:last-child {
   background-color: rgba(0, 128, 0, 0.9);
+}
+
+/* !............................................................! */
+/* ! Style for Cart */
+
+.text-center {
+  position: relative;
+  text-align: center;
+  top: 150px;
 }
