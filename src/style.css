@@ -60,14 +60,13 @@ body {
 .shop {
   position: relative;
   top: 150px;
-  margin: 0 0 200px 0;
+  margin-bottom: 200px;
   display: grid;
   grid-template-columns: repeat(4, 250px);
   row-gap: 50px;
   justify-content: space-evenly;
 }
 
-/* * Use Media in better way (unique pixel sizes) */
 @media (max-width: 1200px) {
   .shop {
     grid-template-columns: repeat(3, 250px);
@@ -94,6 +93,11 @@ body {
     rgb(82, 98, 240)
   );
   box-shadow: 5px 5px rgba(0, 0, 0, 0.274);
+  transition: ease-in-out 300ms;
+}
+
+.shop .item:hover {
+  transform: scale(1.1);
 }
 
 .shop .item > img {
@@ -122,6 +126,10 @@ body {
   font-size: 1.2rem;
 }
 
+.shop .item .price-quantity .quantity-button > img {
+  cursor: pointer;
+}
+
 /* * use red Minus & green Plus */
 .shop .item .price-quantity .quantity-button > img {
   width: 20px;
@@ -141,8 +149,139 @@ body {
 /* !............................................................! */
 /* ! Style for Cart */
 
-.text-center {
+.cart-shop {
+  position: relative;
+  top: 100px;
+  margin: 0 50px 200px 50px;
+}
+
+.cart-shop-result {
+  width: 400px;
+  height: 110px;
+  margin: auto;
   position: relative;
   text-align: center;
-  top: 150px;
+  top: 50px;
+  background: linear-gradient(
+    to left top,
+    rgba(104, 3, 96, 0.6),
+    rgba(47, 62, 192, 0.6)
+  );
+  border-radius: 20px;
+}
+
+.cart-shop-result > h2 {
+  position: relative;
+  top: 10px;
+  font-size: 1.6rem;
+}
+
+.cart-shop-result > a {
+  position: relative;
+  top: 25px;
+}
+
+.cart-shop-result .homeBtn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: transparent;
+  background: linear-gradient(to left top, rgba(104, 3, 96), rgba(47, 62, 192));
+  border: 1px solid white;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.cart-shop-result .homeBtn:hover {
+  background: linear-gradient(
+    to left top,
+    rgba(104, 3, 96, 0.8),
+    rgba(47, 62, 192, 0.8)
+  );
+}
+
+.cart-shop .shopping-cart {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  row-gap: 50px;
+  justify-content: space-evenly;
+  position: relative;
+  top: 100px;
+}
+
+@media (max-width: 1200px) {
+  .cart-shop .shopping-cart {
+    grid-template-columns: repeat(2, 320px);
+  }
+}
+
+@media (max-width: 900px) {
+  .cart-shop .shopping-cart {
+    grid-template-columns: repeat(1, 320px);
+  }
+}
+
+.cart-shop .cart-item {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 8px;
+  background: linear-gradient(
+    to left top,
+    rgb(240, 165, 255),
+    rgb(82, 98, 240)
+  );
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.274);
+  transition: ease-in-out 300ms;
+}
+
+.cart-shop .cart-item:hover {
+  transform: scale(1.05);
+}
+
+.cart-shop .cart-item > img {
+  width: 125px;
+  height: 150px;
+  padding: 10px;
+}
+
+.cart-shop .cart-item .details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  padding: 10px;
+  gap: 10px;
+}
+
+.cart-shop .cart-item .price-quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.cart-shop .cart-item .price-quantity .quantity-button {
+  display: flex;
+  gap: 8px;
+  font-size: 1.2rem;
+}
+
+.cart-shop .cart-item .price-quantity .quantity-button > img {
+  cursor: pointer;
+}
+
+.cart-shop .cart-item .price-quantity .quantity-button > img {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  border-radius: 8px;
+}
+
+.cart-shop .cart-item .price-quantity .quantity-button > img:first-child {
+  background-color: rgba(255, 0, 0, 0.9);
+}
+
+.cart-shop .cart-item .price-quantity .quantity-button > img:last-child {
+  background-color: rgba(0, 128, 0, 0.9);
 }
