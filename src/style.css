@@ -101,7 +101,7 @@ a {
 }
 
 .shop .item:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .shop .item > img {
@@ -264,7 +264,8 @@ a {
 
 .cart-shop .cart-item {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: 125px auto;
   border: 2px solid black;
   border-radius: 8px;
   background: linear-gradient(
@@ -330,6 +331,10 @@ a {
   align-items: center;
   margin-top: 5px;
 }
+.cart-shop .cart-item .price-quantity > h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
 
 .cart-shop .cart-item .price-quantity .quantity-button {
   display: flex;
@@ -354,4 +359,12 @@ a {
 
 .cart-shop .cart-item .price-quantity .quantity-button > img:last-child {
   background-color: rgba(0, 128, 0, 0.9);
+}
+
+.cart-shop .cart-item .total-price {
+  grid-column: 1/3;
+  text-align: center;
+  margin: 5px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
